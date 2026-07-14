@@ -15,7 +15,7 @@ The project includes:
 
 ## 📸 Screenshot
 
-> Add screenshots here after deployment.
+> ![Landing Page](screenshots/landing-page.png)
 
 ---
 
