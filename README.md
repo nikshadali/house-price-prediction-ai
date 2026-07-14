@@ -114,7 +114,7 @@ README.md
 ## Clone
 
 ```bash
-git clone https://github.com/yourusername/house-price-prediction-ai.git
+git clone https://github.com/nikshadali/house-price-prediction-ai.git
 
 cd house-price-prediction-ai
 ```
