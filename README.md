@@ -15,7 +15,7 @@ The project includes:
 
 ## 📸 Screenshot
 
-> ![Landing Page](screenshots/landing-page.png)
+![Landing Page](screenshots/landing-page.png)
 
 ---
 

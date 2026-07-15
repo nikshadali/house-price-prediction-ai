@@ -9,7 +9,7 @@ from sklearn.metrics import (
 )
 
 from ml.config import (
-     DATA_PATH,
+    DATA_PATH,
     MODEL_DIR,
     MODEL_PATH,
     TARGET_COLUMN,
