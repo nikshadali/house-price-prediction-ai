@@ -157,14 +157,14 @@ export function PredictionForm({
                   <Label htmlFor="total_rooms" className="text-xs text-slate-300 font-medium">Total Rooms</Label>
                   <Info className="size-3 text-slate-500" />
                 </div>
-                <Input id="total_rooms" name="total_rooms" type="number" placeholder="880" required className="border-[#1F2937] bg-[#111827] text-white placeholder:text-slate-600 focus-visible:ring-[#00E599]/30 focus-visible:border-[#00E599] h-10 shadow-inner" />
+                <Input id="total_rooms" name="total_rooms" type="number" placeholder="15" required className="border-[#1F2937] bg-[#111827] text-white placeholder:text-slate-600 focus-visible:ring-[#00E599]/30 focus-visible:border-[#00E599] h-10 shadow-inner" />
               </div>
               <div className="grid gap-1.5">
                 <div className="flex items-center gap-1.5">
                   <Label htmlFor="total_bedrooms" className="text-xs text-slate-300 font-medium">Total Bedrooms</Label>
                   <Info className="size-3 text-slate-500 shrink-0" />
                 </div>
-                <Input id="total_bedrooms" name="total_bedrooms" type="number" placeholder="129" required className="border-[#1F2937] bg-[#111827] text-white placeholder:text-slate-600 focus-visible:ring-[#00E599]/30 focus-visible:border-[#00E599] h-10 shadow-inner" />
+                <Input id="total_bedrooms" name="total_bedrooms" type="number" placeholder="3" required className="border-[#1F2937] bg-[#111827] text-white placeholder:text-slate-600 focus-visible:ring-[#00E599]/30 focus-visible:border-[#00E599] h-10 shadow-inner" />
               </div>
             </div>
           </div>
@@ -181,14 +181,14 @@ export function PredictionForm({
                   <Label htmlFor="population" className="text-xs text-slate-300 font-medium">Population</Label>
                   <Info className="size-3 text-slate-500" />
                 </div>
-                <Input id="population" name="population" type="number" placeholder="322" required className="border-[#1F2937] bg-[#111827] text-white placeholder:text-slate-600 focus-visible:ring-[#00E599]/30 focus-visible:border-[#00E599] h-10 shadow-inner" />
+                <Input id="population" name="population" type="number" placeholder="1000" required className="border-[#1F2937] bg-[#111827] text-white placeholder:text-slate-600 focus-visible:ring-[#00E599]/30 focus-visible:border-[#00E599] h-10 shadow-inner" />
               </div>
               <div className="grid gap-1.5">
                 <div className="flex items-center gap-1.5">
                   <Label htmlFor="households" className="text-xs text-slate-300 font-medium">Households</Label>
                   <Info className="size-3 text-slate-500" />
                 </div>
-                <Input id="households" name="households" type="number" placeholder="126" required className="border-[#1F2937] bg-[#111827] text-white placeholder:text-slate-600 focus-visible:ring-[#00E599]/30 focus-visible:border-[#00E599] h-10 shadow-inner" />
+                <Input id="households" name="households" type="number" placeholder="600" required className="border-[#1F2937] bg-[#111827] text-white placeholder:text-slate-600 focus-visible:ring-[#00E599]/30 focus-visible:border-[#00E599] h-10 shadow-inner" />
               </div>
             </div>
           </div>
@@ -205,7 +205,7 @@ export function PredictionForm({
                   <Label htmlFor="median_income" className="text-xs text-slate-300 font-medium">Median Income</Label>
                   <Info className="size-3 text-slate-500" />
                 </div>
-                <Input id="median_income" name="median_income" type="number" step="any" placeholder="8.3252" required className="border-[#1F2937] bg-[#111827] text-white placeholder:text-slate-600 focus-visible:ring-[#00E599]/30 focus-visible:border-[#00E599] h-10 shadow-inner" />
+                <Input id="median_income" name="median_income" type="number" step="any" placeholder="3.3252" required className="border-[#1F2937] bg-[#111827] text-white placeholder:text-slate-600 focus-visible:ring-[#00E599]/30 focus-visible:border-[#00E599] h-10 shadow-inner" />
               </div>
             </div>
 
