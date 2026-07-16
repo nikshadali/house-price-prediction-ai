@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { usePrediction } from "../hooks/usePrediction";
 import { Card, CardHeader } from "@/components/ui/card";
 import { Label } from "@/components/ui/label";
 import { Input } from "@/components/ui/input";
@@ -39,6 +40,7 @@ export function PredictionForm({
   onPrediction: (prediction: number | null) => void;
 }) {
   const [loading, setLoading] = useState(false);
+  const { mutateAsync } = usePrediction();
   const [selectedLocation, setSelectedLocation] = useState(CALIFORNIA_LOCATIONS[0]);
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
@@ -59,19 +61,7 @@ export function PredictionForm({
         ocean_proximity: formData.get("ocean_proximity") as string,
       };
 
-      const res = await fetch("/api/v1/predict", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(data),
-      });
-
-      if (!res.ok) {
-        throw new Error("Failed to fetch prediction");
-      }
-
-      const result = await res.json();
+      const result = await mutateAsync(data);
       onPrediction(result.predicted_price);
     } catch (error) {
       console.error("Prediction error:", error);
