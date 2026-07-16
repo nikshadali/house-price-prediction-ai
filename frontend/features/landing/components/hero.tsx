@@ -72,7 +72,7 @@ export function Hero({ prediction }: { prediction?: number | null }) {
 
             {/* Price overlay on the 3D screen */}
             <div className="absolute top-[26%] right-[16%] md:right-[16%] lg:right-[9%] z-20 text-[#00E599] font-mono font-bold text-2xl md:text-3xl lg:text-4xl drop-shadow-[0_0_20px_rgba(0,229,153,1)] transform -skew-y-[2deg] rotate-[12deg]">
-              ${prediction ? Math.round(prediction).toLocaleString() : "---,---"}
+              {prediction ? "$" + Math.round(prediction).toLocaleString() : ""}
             </div>
           </div>
         </div>
