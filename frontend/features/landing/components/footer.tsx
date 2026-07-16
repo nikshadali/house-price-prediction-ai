@@ -1,6 +1,6 @@
 import React from 'react';
-import { Home, Heart } from 'lucide-react';
-import { Github, Twitter, Linkedin } from '@/components/icons';
+import { Home, Heart, Facebook } from 'lucide-react';
+import { Github, Linkedin } from '@/components/icons';
 import Link from 'next/link';
 
 const Footer = () => {
@@ -21,13 +21,13 @@ const Footer = () => {
 
         {/* Social Links */}
         <div className="flex items-center gap-4">
-          <Link href="#" className="text-slate-500 hover:text-white transition-colors">
-            <Twitter className="size-4" />
+          <Link href="https://www.facebook.com/naikshad.ali" target="_blank" rel="noopener noreferrer" className="text-slate-500 hover:text-white transition-colors">
+            <Facebook className="size-4" />
           </Link>
-          <Link href="#" className="text-slate-500 hover:text-white transition-colors">
+          <Link href="https://www.linkedin.com/in/nikshadali/" target="_blank" rel="noopener noreferrer" className="text-slate-500 hover:text-white transition-colors">
             <Linkedin className="size-4" />
           </Link>
-          <Link href="#" className="text-slate-500 hover:text-white transition-colors">
+          <Link href="https://github.com/nikshadali/" target="_blank" rel="noopener noreferrer" className="text-slate-500 hover:text-white transition-colors">
             <Github className="size-4" />
           </Link>
         </div>

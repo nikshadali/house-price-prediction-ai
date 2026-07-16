@@ -1,4 +1,4 @@
-import { Button } from '@/components/ui/button';
+import { buttonVariants } from '@/components/ui/button';
 import { Home, Moon } from 'lucide-react';
 import { Github } from '@/components/icons';
 import Link from 'next/link';
@@ -28,11 +28,10 @@ const Navbar = () => {
             <Link
               key={item.label}
               href={item.href}
-              className={`text-sm h-full flex items-center border-b-2 transition-colors ${
-                item.active 
-                  ? "border-[#00E599] text-[#00E599] font-medium" 
+              className={`text-sm h-full flex items-center border-b-2 transition-colors ${item.active
+                  ? "border-[#00E599] text-[#00E599] font-medium"
                   : "border-transparent text-slate-400 hover:text-white"
-              }`}
+                }`}
             >
               {item.label}
             </Link>
@@ -43,10 +42,10 @@ const Navbar = () => {
           <button className="text-slate-400 hover:text-white transition-colors">
             <Moon className="size-5" />
           </button>
-          <Button variant="outline" size="sm" className="bg-[#111827] border-[#1F2937] text-white hover:bg-[#1F2937] hover:text-white gap-2 rounded-lg h-9 px-4">
+          <Link href="https://github.com/nikshadali/house-price-prediction-ai" target="_blank" rel="noopener noreferrer" className={buttonVariants({ variant: "outline", size: "sm", className: "bg-[#111827] border-[#1F2937] text-white hover:bg-[#1F2937] hover:text-white gap-2 rounded-lg h-9 px-4" })}>
             <Github className="size-4" />
             <span className="text-sm font-medium">GitHub</span>
-          </Button>
+          </Link>
         </div>
       </div>
     </header>
