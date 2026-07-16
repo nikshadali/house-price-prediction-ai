@@ -1,6 +1,6 @@
 import React from 'react';
-import { Home, Heart, Facebook } from 'lucide-react';
-import { Github, Linkedin } from '@/components/icons';
+import { Home, Heart } from 'lucide-react';
+import { Github, Linkedin, Facebook } from '@/components/icons';
 import Link from 'next/link';
 
 const Footer = () => {
