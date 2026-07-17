@@ -23,7 +23,7 @@ const stats = [
 
 export function Stats() {
   return (
-    <section className="mx-auto grid max-w-7xl gap-6 px-6 py-12 md:grid-cols-4">
+    <section className="mx-auto grid max-w-7xl grid-cols-1 gap-6 px-6 py-12 sm:grid-cols-2 md:grid-cols-4">
       {stats.map((stat) => (
         <Card
           key={stat.title}

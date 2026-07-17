@@ -144,7 +144,7 @@ export function PredictionForm({
               <Home className="size-4" />
               <span className="text-sm font-medium tracking-wide">Property</span>
             </div>
-            <div className="grid grid-cols-3 gap-4">
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
               <div className="grid gap-1.5">
                 <div className="flex items-center gap-1.5">
                   <Label htmlFor="housing_median_age" className="text-xs text-slate-300 font-medium whitespace-nowrap">Housing Median Age</Label>
@@ -175,7 +175,7 @@ export function PredictionForm({
               <Users className="size-4" />
               <span className="text-sm font-medium tracking-wide">Demographics</span>
             </div>
-            <div className="grid grid-cols-2 gap-4">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               <div className="grid gap-1.5">
                 <div className="flex items-center gap-1.5">
                   <Label htmlFor="population" className="text-xs text-slate-300 font-medium">Population</Label>
@@ -194,7 +194,7 @@ export function PredictionForm({
           </div>
 
           {/* Financial & Environment Grid */}
-          <div className="grid grid-cols-2 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
             <div className="space-y-3">
               <div className="flex items-center gap-2 text-[#00E599]">
                 <DollarSign className="size-4" />

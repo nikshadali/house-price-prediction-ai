@@ -51,7 +51,7 @@ export function PredictionResult({ prediction }: { prediction: number | null }) 
         </div>
       </CardHeader>
 
-      <div className="flex flex-col flex-1 p-6 relative min-h-[500px]">
+      <div className="flex flex-col flex-1 p-6 relative min-h-[400px] md:min-h-[500px]">
         {/* Background glow effect */}
         {isCompleted && (
           <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[80%] h-[30%] bg-[#00E599]/5 blur-[80px] rounded-[100%] pointer-events-none" />
@@ -68,7 +68,7 @@ export function PredictionResult({ prediction }: { prediction: number | null }) 
             </div>
 
             <p className="text-slate-400 font-medium mb-2 tracking-wide text-sm">Estimated Price</p>
-            <h1 className="text-6xl font-bold text-[#00E599] tracking-tighter drop-shadow-[0_0_20px_rgba(0,229,153,0.4)]">
+            <h1 className="text-4xl md:text-6xl font-bold text-[#00E599] tracking-tighter drop-shadow-[0_0_20px_rgba(0,229,153,0.4)]">
               ${prediction.toLocaleString()}
             </h1>
             <p className="text-slate-500 text-sm mt-3 font-medium uppercase tracking-widest text-center max-w-[80%]">
@@ -76,7 +76,7 @@ export function PredictionResult({ prediction }: { prediction: number | null }) 
             </p>
 
             {/* Stat Boxes */}
-            <div className="grid grid-cols-4 gap-4 w-full mt-10">
+            <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 w-full mt-10">
               <div className="flex flex-col items-center justify-center py-4 px-2 rounded-xl bg-[#111827] border border-[#1F2937]">
                 <Box className="size-6 text-[#38BDF8] mb-2" />
                 <p className="text-[11px] text-slate-400 font-medium mb-1">Model</p>

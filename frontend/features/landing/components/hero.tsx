@@ -12,7 +12,7 @@ export function Hero({ prediction }: { prediction?: number | null }) {
             <span className="text-xs font-semibold text-[#00E599] tracking-wider uppercase">AI Powered</span>
           </div>
 
-          <h1 className="text-5xl lg:text-7xl font-bold tracking-tight text-white mb-2">
+          <h1 className="text-4xl md:text-5xl lg:text-7xl font-bold tracking-tight text-white mb-2">
             House Price <br />
             <span className="text-[#00E599]">Prediction AI</span>
           </h1>
@@ -71,7 +71,7 @@ export function Hero({ prediction }: { prediction?: number | null }) {
             />
 
             {/* Price overlay on the 3D screen */}
-            <div className="absolute top-[26%] right-[16%] md:right-[16%] lg:right-[9%] z-20 text-[#00E599] font-mono font-bold text-2xl md:text-3xl lg:text-4xl drop-shadow-[0_0_20px_rgba(0,229,153,1)] transform -skew-y-[2deg] rotate-[12deg]">
+            <div className="absolute top-[26%] right-[16%] md:right-[16%] lg:right-[9%] z-20 text-[#00E599] font-mono font-bold text-xl sm:text-2xl md:text-3xl lg:text-4xl drop-shadow-[0_0_20px_rgba(0,229,153,1)] transform -skew-y-[2deg] rotate-[12deg]">
               {prediction ? "$" + Math.round(prediction).toLocaleString() : ""}
             </div>
           </div>
