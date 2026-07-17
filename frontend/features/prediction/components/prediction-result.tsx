@@ -33,7 +33,7 @@ export function PredictionResult({ prediction }: { prediction: number | null }) 
 
   return (
     <Card className="border-white/10 bg-[#0A1017]/40 backdrop-blur-xl flex flex-col justify-between overflow-hidden shadow-2xl rounded-2xl relative">
-      <CardHeader className="border-b border-white/10 pb-4 pt-6 px-6 bg-transparent">
+      <CardHeader className="border-b border-white/10 pb-4 pt-6 px-4 sm:px-6 bg-transparent">
         <div className="flex items-center justify-between">
           <div>
             <div className="flex items-center gap-2 mb-1">
@@ -51,7 +51,7 @@ export function PredictionResult({ prediction }: { prediction: number | null }) 
         </div>
       </CardHeader>
 
-      <div className="flex flex-col flex-1 p-6 relative min-h-[400px] md:min-h-[500px]">
+      <div className="flex flex-col flex-1 p-4 sm:p-6 relative min-h-[400px] md:min-h-[500px]">
         {/* Background glow effect */}
         {isCompleted && (
           <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[80%] h-[30%] bg-[#00E599]/5 blur-[80px] rounded-[100%] pointer-events-none" />

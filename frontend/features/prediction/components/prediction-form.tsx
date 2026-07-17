@@ -78,7 +78,7 @@ export function PredictionForm({
 
   return (
     <Card className="border-white/10 bg-[#0A1017]/40 backdrop-blur-xl flex flex-col justify-between overflow-hidden shadow-2xl rounded-2xl">
-      <CardHeader className="border-b border-white/10 pb-4 pt-6 px-6 bg-transparent">
+      <CardHeader className="border-b border-white/10 pb-4 pt-6 px-4 sm:px-6 bg-transparent">
         <div className="flex items-center justify-between">
           <div>
             <div className="flex items-center gap-2 mb-1">
@@ -100,7 +100,7 @@ export function PredictionForm({
         </div>
       </CardHeader>
 
-      <form onSubmit={handleSubmit} className="flex flex-col flex-1 p-6 gap-8">
+      <form onSubmit={handleSubmit} className="flex flex-col flex-1 p-4 sm:p-6 gap-6 sm:gap-8">
         <div className="space-y-6">
           {/* Location Group */}
           <div className="space-y-3">

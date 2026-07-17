@@ -19,7 +19,7 @@ const Navbar = () => {
 
   return (
     <header className="sticky top-0 z-50 border-b border-white/5 bg-[#040810]/90 backdrop-blur-xl">
-      <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-6">
+      <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 md:px-6">
         <Link href="/" className="flex items-center gap-3 z-50">
           <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-[#00E599]/10 text-[#00E599]">
             <Home className="size-5" />
@@ -65,7 +65,7 @@ const Navbar = () => {
 
       {/* Mobile Nav Menu */}
       {isOpen && (
-        <div className="md:hidden absolute top-16 left-0 right-0 border-b border-white/5 bg-[#040810] px-6 py-6 flex flex-col gap-6 shadow-2xl animate-in slide-in-from-top-4 duration-200">
+        <div className="md:hidden absolute top-16 left-0 right-0 border-b border-white/5 bg-[#040810] px-4 py-6 flex flex-col gap-6 shadow-2xl animate-in slide-in-from-top-4 duration-200">
           <nav className="flex flex-col gap-4">
             {navigation.map((item) => (
               <Link

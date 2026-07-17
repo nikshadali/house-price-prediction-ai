@@ -3,7 +3,7 @@ import Image from "next/image";
 
 export function Hero({ prediction }: { prediction?: number | null }) {
   return (
-    <section className="mx-auto max-w-7xl px-6 py-16 md:py-24">
+    <section className="mx-auto max-w-7xl px-4 md:px-6 py-16 md:py-24">
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-8 items-center">
         {/* Left Content */}
         <div className="flex flex-col items-start text-left">
