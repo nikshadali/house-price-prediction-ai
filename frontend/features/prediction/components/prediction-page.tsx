@@ -14,9 +14,9 @@ export function PredictionPage({
   return (
     <section
       id="predict"
-      className="mx-auto max-w-7xl px-4 md:px-6 py-16 md:py-24"
+      className="mx-auto w-full max-w-7xl px-2 md:px-6 py-16 md:py-24"
     >
-      <div className="grid gap-8 lg:grid-cols-2">
+      <div className="grid w-full gap-8 lg:grid-cols-2">
         <PredictionForm
           onPrediction={onPrediction}
         />
