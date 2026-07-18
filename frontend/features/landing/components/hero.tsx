@@ -2,6 +2,10 @@ import { Sparkles, TrendingUp, Target, Zap, LineChart, Home, Activity } from "lu
 import Image from "next/image";
 
 export function Hero({ prediction }: { prediction?: number | null }) {
+ const MODEL_NAME = "Random Forest";
+  const R2_SCORE = 0.8169;
+
+ 
   return (
     <section className="mx-auto max-w-7xl px-4 md:px-6 py-16 md:py-24">
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-8 items-center">
@@ -30,7 +34,7 @@ export function Hero({ prediction }: { prediction?: number | null }) {
               </div>
               <div>
                 <p className="text-[11px] text-slate-400 font-medium uppercase tracking-wider">Trained Model</p>
-                <p className="text-sm font-semibold text-white">Linear Regression</p>
+                <p className="text-sm font-semibold text-white">{MODEL_NAME}</p>
               </div>
             </div>
 
@@ -40,7 +44,7 @@ export function Hero({ prediction }: { prediction?: number | null }) {
               </div>
               <div>
                 <p className="text-[11px] text-slate-400 font-medium uppercase tracking-wider">Accuracy (R²)</p>
-                <p className="text-sm font-semibold text-white">62.54%</p>
+                <p className="text-sm font-semibold text-white">{(R2_SCORE * 100).toFixed(2)}%</p>
               </div>
             </div>
 

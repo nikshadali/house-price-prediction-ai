@@ -30,6 +30,8 @@ function numberToWords(num: number): string {
 
 export function PredictionResult({ prediction , predictionTime}: { prediction: number | null, predictionTime: number | null}) {
   const isCompleted = prediction !== null;
+  const MODEL_NAME = "Random Forest";
+  const R2_SCORE = 0.8169;
 
   return (
     <Card className="w-full border-white/10 bg-[#0A1017]/40 backdrop-blur-xl flex flex-col justify-between overflow-hidden shadow-2xl rounded-2xl relative">
@@ -80,12 +82,12 @@ export function PredictionResult({ prediction , predictionTime}: { prediction: n
               <div className="flex flex-col items-center justify-center py-4 px-2 rounded-xl bg-[#111827] border border-[#1F2937]">
                 <Box className="size-6 text-[#38BDF8] mb-2" />
                 <p className="text-[11px] text-slate-400 font-medium mb-1">Model</p>
-                <p className="text-sm text-white font-semibold text-center leading-tight">Linear<br/>Regression</p>
+                <p className="text-sm text-white font-semibold text-center leading-tight"> {MODEL_NAME}</p>
               </div>
               <div className="flex flex-col items-center justify-center py-4 px-2 rounded-xl bg-[#111827] border border-[#1F2937]">
                 <Target className="size-6 text-[#00E599] mb-2" />
                 <p className="text-[11px] text-slate-400 font-medium mb-1">R² Score</p>
-                <p className="text-sm text-white font-semibold mt-1">62.54%</p>
+                <p className="text-sm text-white font-semibold mt-1"> {(R2_SCORE * 100).toFixed(2)}%</p>
               </div>
               <div className="flex flex-col items-center justify-center py-4 px-2 rounded-xl bg-[#111827] border border-[#1F2937]">
                 <Zap className="size-6 text-[#00E599] mb-2" />

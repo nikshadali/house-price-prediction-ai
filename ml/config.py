@@ -9,8 +9,10 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 DATA_DIR = BASE_DIR / "data"
 MODEL_DIR = BASE_DIR / "models"
 
-DATA_PATH = DATA_DIR / "housing.csv"
+# Create models directory if it doesn't exist
+MODEL_DIR.mkdir(parents=True, exist_ok=True)
 
+DATA_PATH = DATA_DIR / "housing.csv"
 MODEL_PATH = MODEL_DIR / "house_price_pipeline.pkl"
 
 # -------------------------
@@ -39,5 +41,4 @@ NUMERIC_FEATURES = [
 # -------------------------
 
 TEST_SIZE = 0.20
-
 RANDOM_STATE = 42
