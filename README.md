@@ -1,15 +1,8 @@
 # 🏠 PricePilot AI - House Price Prediction
 
-An end-to-end Machine Learning web application that predicts California house prices using a trained Linear Regression model.
+PricePilot AI is an end-to-end Machine Learning web application that predicts California house prices using the **best-performing regression model** selected automatically after evaluating multiple machine learning algorithms.
 
-The project includes:
-
-- 🤖 Machine Learning with Scikit-Learn
-- ⚡ FastAPI Backend
-- 🎨 Next.js Frontend
-- 🔄 REST API Integration
-- 📊 Data Preprocessing Pipeline
-- 📈 House Price Prediction
+The application combines a Scikit-Learn ML pipeline, FastAPI backend, and a modern Next.js frontend to deliver fast and accurate house price predictions.
 
 ---
 
@@ -19,30 +12,38 @@ The project includes:
 
 ---
 
-## 🚀 Demo
+# 🚀 Live Demo
 
-Frontend:
+### Frontend
+
 https://house-price-prediction-ai-peach.vercel.app/
 
-Backend API:
+### Backend API
+
 https://house-price-prediction-ai-harm.onrender.com/
 
----
+### Swagger Documentation
 
-# Features
-
-- Predict California house prices
-- Interactive web interface
-- Machine Learning pipeline
-- FastAPI REST API
-- Responsive UI
-- Data validation using Zod
-- React Hook Form
-- TanStack Query
+https://house-price-prediction-ai-harm.onrender.com/docs
 
 ---
 
-# Tech Stack
+# ✨ Features
+
+- 🏠 Predict California house prices
+- 🤖 Compare multiple Machine Learning models
+- 🥇 Automatically select the best-performing model
+- ⚡ FastAPI REST API
+- 🎨 Modern Next.js interface
+- 📊 Scikit-Learn preprocessing pipeline
+- ✅ Zod form validation
+- 🔄 TanStack Query API integration
+- 📱 Fully responsive design
+- ⚡ Real-time prediction time measurement
+
+---
+
+# 🛠 Tech Stack
 
 ## Frontend
 
@@ -51,6 +52,7 @@ https://house-price-prediction-ai-harm.onrender.com/
 - Tailwind CSS
 - shadcn/ui
 - React Hook Form
+- Zod
 - TanStack Query
 - Axios
 
@@ -69,49 +71,71 @@ https://house-price-prediction-ai-harm.onrender.com/
 
 ---
 
-# Machine Learning Model
+# 🤖 Machine Learning Pipeline
 
-Model:
+### Data Preprocessing
 
-- Linear Regression
-
-Preprocessing:
-
-- Missing value handling using SimpleImputer
+- Missing Value Imputation
 - One-Hot Encoding
 - ColumnTransformer
 - Scikit-Learn Pipeline
 
+### Models Evaluated
+
+| Model | R² Score |
+|--------|----------|
+| 🥇 Random Forest | **0.8169** |
+| Gradient Boosting | 0.7615 |
+| Decision Tree | 0.6352 |
+| Linear Regression | 0.6254 |
+
+### Selected Production Model
+
+**Random Forest Regressor**
+
+The training pipeline automatically evaluates all models and saves the best-performing model.
+
 ---
 
-# Model Performance
+# 📈 Model Performance
 
 | Metric | Value |
-|---------|-------|
-| MAE | 50,670.49 |
-| RMSE | 70,059.19 |
-| R² Score | 0.6254 |
+|---------|-------:|
+| MAE | **31,636.35** |
+| RMSE | **48,977.06** |
+| R² Score | **0.8169** |
 
 ---
 
-# Project Structure
+# 📂 Project Structure
 
 ```text
 house-price-prediction-ai/
-
-backend/
-frontend/
-ml/
-models/
-data/
-README.md
+│
+├── backend/
+│   └── app/
+│
+├── frontend/
+│
+├── ml/
+│   ├── config.py
+│   ├── pipeline.py
+│   └── train.py
+│
+├── data/
+├── models/
+├── screenshots/
+│
+├── pyproject.toml
+├── uv.lock
+└── README.md
 ```
 
 ---
 
-# Installation
+# ⚙️ Installation
 
-## Clone
+## Clone Repository
 
 ```bash
 git clone https://github.com/nikshadali/house-price-prediction-ai.git
@@ -121,23 +145,45 @@ cd house-price-prediction-ai
 
 ---
 
-## Backend
+## Install Dependencies
 
 ```bash
-cd backend
-
 uv sync
-
-uv run uvicorn app.main:app --reload
 ```
 
-Backend:
+---
+
+## Train the Model
+
+```bash
+uv run -m ml.train
+```
+
+This command:
+
+- compares all regression models
+- selects the best-performing model
+- saves the trained pipeline into:
+
+```text
+models/house_price_pipeline.pkl
+```
+
+---
+
+## Run Backend
+
+```bash
+uv run uvicorn backend.app.main:app --reload
+```
+
+Backend
 
 ```
 http://localhost:8000
 ```
 
-Swagger:
+Swagger
 
 ```
 http://localhost:8000/docs
@@ -145,7 +191,7 @@ http://localhost:8000/docs
 
 ---
 
-## Frontend
+## Run Frontend
 
 ```bash
 cd frontend
@@ -155,7 +201,7 @@ npm install
 npm run dev
 ```
 
-Frontend:
+Frontend
 
 ```
 http://localhost:3000
@@ -163,15 +209,15 @@ http://localhost:3000
 
 ---
 
-# API Endpoint
+# 📡 API Endpoint
 
-POST
+### POST
 
 ```
 /api/v1/predict
 ```
 
-Example Request
+### Example Request
 
 ```json
 {
@@ -187,32 +233,34 @@ Example Request
 }
 ```
 
-Example Response
+### Example Response
 
 ```json
 {
-  "predicted_price": 410584.36
+  "predicted_price": 431942.36
 }
 ```
 
 ---
 
-# Future Improvements
+# 🚀 Future Improvements
 
-- Random Forest
 - XGBoost
+- LightGBM
+- Hyperparameter Tuning
 - Prediction History
-- Interactive Charts
-- Explainable AI
+- Explainable AI (SHAP)
 - Docker
 - CI/CD
 - Authentication
+- User Dashboard
 
 ---
 
-# Author
+# 👨‍💻 Author
 
-Nikshad Ali
+**Nikshad Ali**
 
-GitHub:
+GitHub
+
 https://github.com/nikshadali
