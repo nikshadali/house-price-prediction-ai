@@ -71,11 +71,12 @@ const start = performance.now();
       console.error("Prediction error:", error);
       // Fallback for testing if backend is unreachable
 
-       const end = performance.now();
-    setPredictionTime(Math.round(end - start));
-      onPrediction(410584);
+      
     } finally {
       setLoading(false);
+      const end = performance.now();
+       setPredictionTime(Math.round(end - start));
+  
     }
   };
 
