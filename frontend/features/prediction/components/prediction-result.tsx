@@ -28,7 +28,7 @@ function numberToWords(num: number): string {
   return convert(num) + " Dollars";
 }
 
-export function PredictionResult({ prediction }: { prediction: number | null }) {
+export function PredictionResult({ prediction , predictionTime}: { prediction: number | null, predictionTime: number | null}) {
   const isCompleted = prediction !== null;
 
   return (
@@ -90,7 +90,7 @@ export function PredictionResult({ prediction }: { prediction: number | null }) 
               <div className="flex flex-col items-center justify-center py-4 px-2 rounded-xl bg-[#111827] border border-[#1F2937]">
                 <Zap className="size-6 text-[#00E599] mb-2" />
                 <p className="text-[11px] text-slate-400 font-medium mb-1">Prediction Time</p>
-                <p className="text-sm text-white font-semibold mt-1">18 ms</p>
+                <p className="text-sm text-white font-semibold mt-1">{predictionTime ?? "--"} ms</p>
               </div>
               <div className="flex flex-col items-center justify-center py-4 px-2 rounded-xl bg-[#111827] border border-[#1F2937]">
                 <Database className="size-6 text-[#38BDF8] mb-2" />

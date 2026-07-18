@@ -22,10 +22,10 @@ The project includes:
 ## 🚀 Demo
 
 Frontend:
-https://your-frontend-url.vercel.app
+https://house-price-prediction-ai-peach.vercel.app/
 
 Backend API:
-https://your-backend-url.onrender.com/docs
+https://house-price-prediction-ai-harm.onrender.com/
 
 ---
 

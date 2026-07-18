@@ -9,8 +9,11 @@ export function PredictionPage({
   onPrediction,
 }: {
   prediction: number | null;
+  
   onPrediction: (val: number | null) => void;
+  
 }) {
+   const [predictionTime, setPredictionTime] = useState<number | null>(null);
   return (
     <section
       id="predict"
@@ -19,10 +22,12 @@ export function PredictionPage({
       <div className="grid w-full gap-8 lg:grid-cols-2">
         <PredictionForm
           onPrediction={onPrediction}
+          setPredictionTime={setPredictionTime}
         />
 
         <PredictionResult
           prediction={prediction}
+          predictionTime={predictionTime}
         />
       </div>
     </section>

@@ -36,16 +36,20 @@ const CALIFORNIA_LOCATIONS = [
 
 export function PredictionForm({
   onPrediction,
+  setPredictionTime
 }: {
   onPrediction: (prediction: number | null) => void;
+  setPredictionTime: (time: number) => void;
 }) {
   const [loading, setLoading] = useState(false);
   const { mutateAsync } = usePrediction();
+ 
   const [selectedLocation, setSelectedLocation] = useState(CALIFORNIA_LOCATIONS[0]);
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setLoading(true);
+const start = performance.now();
 
     try {
       const formData = new FormData(e.currentTarget);
@@ -66,6 +70,9 @@ export function PredictionForm({
     } catch (error) {
       console.error("Prediction error:", error);
       // Fallback for testing if backend is unreachable
+
+       const end = performance.now();
+    setPredictionTime(Math.round(end - start));
       onPrediction(410584);
     } finally {
       setLoading(false);

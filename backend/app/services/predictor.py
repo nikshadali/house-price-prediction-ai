@@ -1,7 +1,7 @@
 import joblib
 import pandas as pd
 
-from app.core.config import MODEL_PATH
+from backend.app.core.config import MODEL_PATH
 
 
 class PredictionService:

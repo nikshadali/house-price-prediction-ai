@@ -8,13 +8,15 @@ from sklearn.preprocessing import OneHotEncoder
 
 from sklearn.linear_model import LinearRegression
 
+from sklearn.base import RegressorMixin
+
 from ml.config import (
     NUMERIC_FEATURES,
     CATEGORICAL_FEATURES,
 )
 
 
-def build_pipeline() -> Pipeline:
+def build_pipeline(model: RegressorMixin) -> Pipeline:
    numeric_pipeline = Pipeline(
     steps=[
         (
@@ -59,8 +61,8 @@ def build_pipeline() -> Pipeline:
             preprocessor,
         ),
         (
-            "model",
-            LinearRegression(),
+           
+             "model", model,
         ),
     ]
 )

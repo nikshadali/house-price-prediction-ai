@@ -1,11 +1,11 @@
 from fastapi import APIRouter
 
-from app.models.prediction import (
+from backend.app.models.prediction import (
     PredictionRequest,
     PredictionResponse,
 )
 
-from app.services.predictor import PredictionService
+from backend.app.services.predictor import PredictionService
 
 router = APIRouter(
     prefix="/api/v1/predict",
